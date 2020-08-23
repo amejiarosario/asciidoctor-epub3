@@ -16,5 +16,6 @@ group :optional do
   gem 'epubcheck-ruby', '~> 4.2.4.0'
   # We would like to make kindlegen a runtime dependency, but can't because of the way asciidoctorj-epub3 packaging works
   # See https://github.com/asciidoctor/asciidoctor-epub3/issues/288
-  gem 'kindlegen', '~> 3.0.3'
+  # Adrian: working around "asciidoctor: ERROR: KindleGen failed to write MOBI" https://github.com/asciidoctor/asciidoctor-epub3/issues/6
+  gem 'kindlegen', github: 'tdtds/kindlegen'
 end
